@@ -28,12 +28,21 @@
   <body>
     <script src="popup.js"></script>
     <div id="folders"></div>
+    
     <div id="create_folder">
       <input type="text" name="folder_name" id="folder_name"/>
       <input type="button" value="Add" name="submit_folder" id="submit_folder"/>
     </div>
+
+    <div id="create_link">
+        <select id="folder_select"></select>
+        <input type="text" name="link_title" id="link_title"/>
+        <input type="text" name="link" id="link"/>
+        <input type="button" value="Add" name="submit_link" id="submit_link"/>
+    </div>
     
     <button id="add_folder">Add Folder</button>
+    <button id="add_link">Add Link</button>
 
     <script type="text/javascript" src="main.js"></script>
 
