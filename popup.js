@@ -12,6 +12,19 @@ function DisplayFolders(folders){
   	}
 }
 
+function SetCreateLink(folders){
+	$("#folder_select").html('');
+	for (i=0; i<folders.length; i++){
+		$("#folder_select").append(
+			"<option value="+folders[i]+">"+folders[i]+"</option>"
+		);
+	}
+}
+
+function CreateLink(folders){
+
+}
+
 function SetPath(){
   chrome.tabs.getSelected(null, function(tab){
     var pathname = tab.title;

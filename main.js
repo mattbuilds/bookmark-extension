@@ -23,6 +23,7 @@ $(document).ready(function(){
 	});
 
 	$("#add_link").click(function(){
+		SetCreateLink(folders);
 		$("#create_link").show();
 		$("#add_folder").hide();
 		$("#add_link").hide();
