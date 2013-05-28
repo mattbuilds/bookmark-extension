@@ -4,56 +4,42 @@ $(document).ready(function(){
 	if (folders===undefined){
 		folders = {};
 	}
-	$("#create_folder").hide();
-	$("#create_link").hide();
-	$("#display_links").hide();
-	DisplayFolders(folders);
+	var page = new Page();
+	var attributes = new Attributes();
+	page.displayFolders(folders);
+	page.displayHome();
 
 	$("#folders").on('click', 'div.folder', function(){
-		var folderId = $(this).text();
-		FolderPage(folders, folderId);
+		page.displayFolderPage(folders, $(this).text());
 	});
 
 	$("#add_folder").click(function(){
-		$("#folders").hide();
-		$("#create_folder").show();
-		$("#add_folder").hide();
-		$("#add_link").hide();	
+		page.displayAddFolder();
 	});
+
+	$("#add_attribute").click(function(){
+		var name = $("#attribute_name").val();
+		var type = $("#attribute_type").val();
+		attributes.addAttribute(name, type)
+	})
 
 	$("#submit_folder").click(function(){
 		var name = $("#folder_name").val();
-		CreateFolder(folders, name);
-		$("#folders").show();
-		$("#create_folder").hide();
-		$("#add_folder").show();
-		$("#add_link").show();	
+		CreateFolder(folders, name, page);
 	});
 
 	$("#display_links").on('click', 'button.back', function(){
-		$("#folders").show();
-		$("#create_folder").hide();
-		$("#display_links").hide();
-		$("#add_folder").show();
-		$("#add_link").show();		
+		page.displayHome();		
 	});
 
 	$("#add_link").click(function(){
-		SetCreateLink(folders);
-		$("#folders").hide();
-		$("#create_link").show();
-		$("#add_folder").hide();
-		$("#add_link").hide();
+		SetCreateLink(folders, page);
 	});
 
 	$("#submit_link").click(function(){
 		var folder = $("#folder_select").val();
 		var title = $("#link_title").val();
 		var link = $("#link").val();
-		CreateLink(folders, folder, title, link);
-		$("#folders").show();
-		$("#create_link").hide();
-		$("#add_folder").show();
-		$("#add_link").show();	
+		CreateLink(folders, folder, title, link, page);
 	});
 });

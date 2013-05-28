@@ -4,7 +4,7 @@
     <title>Getting Started Extension's Popup</title>
     <style>
       body {
-        min-width: 357px;
+        min-width: 657px;
         overflow-x: hidden;
       }
 
@@ -27,16 +27,27 @@
   </head>
   <body>
     <script src="popup.js"></script>
+    <script src="page.js"></script>
+    <script src="attributes.js"></script>
     <div id="folders"></div>
     
     <div id="create_folder">
-      <input type="text" name="folder_name" id="folder_name"/>
-      <input type="button" value="Add" name="submit_folder" id="submit_folder"/>
+      Folder Name: <input type="text" name="folder_name" id="folder_name"/>
     </div>
 
     <div id="display_links"></div>
 
     <div id="create_attributes">
+      <div id ="attributes"></div>
+      Attribute Name: <input type="text" name="attribute_name" id="attribute_name"/>
+      Attribute Type: <select id="attribute_type" class="attribute">
+        <option value="dropdown">Dropdown</option>
+        <option value="select_box">Select Box</option>
+        <option value="radio_button">Radio Button</option>
+        <option value="text_field"> Text Field</option>
+      </select> 
+      <input type="button" value="Add Attribute" name="add_attribute" id="add_attribute" />
+      <input type="button" value="Submit" name="submit_folder" id="submit_folder"/>
     </div>
 
     <div id="create_link">

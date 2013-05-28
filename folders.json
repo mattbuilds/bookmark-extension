@@ -1,0 +1,38 @@
+{
+    "Folder": {
+        "links": [
+            {
+                "title": "title",
+                "link": "link",
+                "attributes": [],
+                "tags": []
+            },
+            {
+                "title": "title",
+                "link": "link",
+                "attributes": [],
+                "tags": []
+            }
+        ],
+        "attributes": [
+            {
+                "Status": {
+                    "type": "dropdown",
+                    "values": []
+                }
+            },
+            {
+                "Priority": {
+                    "type": "dropdown",
+                    "values": []
+                }
+            },
+            {
+                "Description": {
+                    "type": "Textbox",
+                    "value": ""
+                }
+            }
+        ]
+    }
+}
