@@ -65,7 +65,7 @@ function Page(){
 	this.displayFolderPage = function (folders, folderId){
 	  	for(var key in folders){
 	    	if (key === folderId){
-	      		folder = folders[key];
+	      		folder = folders[key].links;
 	      		this.displayLinks(key, folder);
 	    	}
 	  	}

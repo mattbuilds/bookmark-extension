@@ -1,6 +1,7 @@
 function CreateFolder(folders, name, page){
-  folders[name] = [];
+  folders[name] = {"links":[], "attributes":[]};
 	page.displayFolders(folders);
+  console.log(folders);
 }
 
 function SetCreateLink(folders, page){
@@ -21,7 +22,7 @@ function CreateLink(folders, folder, title, link, page){
   for (var key in folders){
     if (key === folder){
       //console.log(folders);
-      folders[key].push({"title": title, "link" : link});
+      folders[key].links.push({"title": title, "link" : link});
     }
   }
   page.displayHome();

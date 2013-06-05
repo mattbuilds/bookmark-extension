@@ -20,7 +20,8 @@ $(document).ready(function(){
 	$("#add_attribute").click(function(){
 		var name = $("#attribute_name").val();
 		var type = $("#attribute_type").val();
-		attributes.addAttribute(name, type)
+		attributes.addAttribute(name, type);
+		console.log(folders);
 	})
 
 	$("#submit_folder").click(function(){
