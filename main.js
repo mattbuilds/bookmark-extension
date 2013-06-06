@@ -5,7 +5,7 @@ $(document).ready(function(){
 		folders = {};
 	}
 	var page = new Page();
-	var attributes = new Attributes();
+	var attr = new Attributes();
 	page.displayFolders(folders);
 	page.displayHome();
 
@@ -20,8 +20,9 @@ $(document).ready(function(){
 	$("#add_attribute").click(function(){
 		var name = $("#attribute_name").val();
 		var type = $("#attribute_type").val();
-		attributes.addAttribute(name, type);
-		console.log(folders);
+		attr.addAttribute(name, type);
+		//console.log(attr.attributes);
+		page.displayAttributes(attr.attributes);
 	})
 
 	$("#submit_folder").click(function(){

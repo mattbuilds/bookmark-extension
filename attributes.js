@@ -1,5 +1,5 @@
 function Attributes(){
-	var attributes = []
+	this.attributes = []
 
 	var checkType = function(type){
 		if (type==="text_field"){
@@ -11,13 +11,16 @@ function Attributes(){
 	}
 
 	this.addAttribute = function(name, type){
-		attributes.push(
+		this.attributes.push(
 			{
 				"name": name,
 				"type": type,
 				"values": checkType(type)
 			}
 		)
-		console.log(attributes);
+	}
+
+	this.addValue = function(name, value){
+
 	}
 }

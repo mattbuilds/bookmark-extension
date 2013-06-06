@@ -16,22 +16,19 @@
         ],
         "attributes": [
             {
-                "Status": {
-                    "type": "dropdown",
-                    "values": []
-                }
+                "name": "Status",   
+                "type": "dropdown",
+                "values": []
             },
             {
-                "Priority": {
-                    "type": "dropdown",
-                    "values": []
-                }
+                "name": "Priority",
+                "type": "dropdown",
+                "values": []
             },
             {
-                "Description": {
-                    "type": "Textbox",
-                    "value": ""
-                }
+                "name": "Description",
+                "type": "Textbox",
+                "value": ""
             }
         ]
     }

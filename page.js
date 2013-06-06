@@ -56,10 +56,17 @@ function Page(){
 		)
 	}
 
-	this.addAttribute = function(attribute){
-		$("#attributes").append(
-  				
-  		);
+	this.displayAttributes = function(attributes){
+		$("#attributes").html('');
+		for(i=0; i<attributes.length; i++){
+			console.log(attributes[i]);
+			$("#attributes").append(
+	  			"<div id="+attributes[i].name +">Attribute: "+ 
+	  			attributes[i].name + " New Value: " +
+	  			"<input type='text' name='val_text' id='val_text'/>" +
+	  			"<input type='button' value='Add Value' name='add_value' id='add_value'/></div>"
+	  		);
+	  	}
 	}
 
 	this.displayFolderPage = function (folders, folderId){
