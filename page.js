@@ -61,10 +61,11 @@ function Page(){
 		for(i=0; i<attributes.length; i++){
 			console.log(attributes[i]);
 			$("#attributes").append(
-	  			"<div id="+attributes[i].name +">Attribute: "+ 
-	  			attributes[i].name + " New Value: " +
-	  			"<input type='text' name='val_text' id='val_text'/>" +
-	  			"<input type='button' value='Add Value' name='add_value' id='add_value'/></div>"
+	  			"Attribute: "+ 
+	  			attributes[i].name + " " +
+	  			"<input type='text' name='val_text' class='val_text'/>" +
+	  			"<button class='add_value'>Add Value</button>"+
+	  			"<button class='delete_attr'>Delete Attribute</button>"
 	  		);
 	  	}
 	}

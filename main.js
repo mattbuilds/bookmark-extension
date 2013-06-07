@@ -17,6 +17,14 @@ $(document).ready(function(){
 		page.displayAddFolder();
 	});
 
+	$("#attributes").on('click', 'button.add_value', function(){
+		console.log($(this).parent().children('input.val_text').val());
+	});
+
+	$("#attributes").on('click', 'button.delete_attr', function(){
+		console.log("Remove");
+	});
+
 	$("#add_attribute").click(function(){
 		var name = $("#attribute_name").val();
 		var type = $("#attribute_type").val();
